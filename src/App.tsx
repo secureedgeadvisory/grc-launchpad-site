@@ -1,17 +1,33 @@
-function App() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <h1 className="text-3xl font-bold text-gray-900">GRC Launchpad</h1>
-          <p className="mt-1 text-gray-600">by SecureEdge Advisory</p>
-        </div>
-      </header>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <p className="text-gray-700">Free GRC self-assessment tool using FAIR methodology.</p>
-      </main>
-    </div>
-  )
-}
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import SecureEdgePage from "./pages/SecureEdgePage";
+import AssessmentPage from "./pages/AssessmentPage";
+import GlossaryPage from "./pages/GlossaryPage";
+import NewsPage from "./pages/NewsPage";
+import PrivacyPage from "./pages/PrivacyPage";
 
-export default App
+export default function App() {
+  const [currentPage, setCurrentPage] = useState("home");
+
+  function navigate(page: string) {
+    setCurrentPage(page);
+    window.scrollTo(0, 0);
+  }
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar currentPage={currentPage} onNavigate={navigate} />
+      <main className="flex-1">
+        {currentPage === "home" && <HomePage onNavigate={navigate} />}
+        {currentPage === "secureedge" && <SecureEdgePage onNavigate={navigate} />}
+        {currentPage === "assessment" && <AssessmentPage />}
+        {currentPage === "glossary" && <GlossaryPage />}
+        {currentPage === "news" && <NewsPage />}
+        {currentPage === "privacy" && <PrivacyPage />}
+      </main>
+      <Footer onNavigate={navigate} />
+    </div>
+  );
+}

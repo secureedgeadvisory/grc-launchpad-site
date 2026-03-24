@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-navy: #0f2044;
+    --brand-blue: #1a56db;
+    --brand-cyan: #06b6d4;
+    --brand-emerald: #10b981;
+    --brand-amber: #f59e0b;
+    --brand-red: #ef4444;
+    --brand-slate: #64748b;
+  }
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@media print {
+  nav, .no-print { display: none !important; }
+  .print-break { page-break-before: always; }
+}
