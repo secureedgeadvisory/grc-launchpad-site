@@ -2,68 +2,68 @@ import { Calendar, Tag } from "lucide-react";
 
 const NEWS_ITEMS = [
   {
-    date: "June 2025",
+    date: "March 2026",
     category: "Regulation",
     categoryColor: "bg-blue-100 text-blue-700",
-    title: "UAE PDPL Enforcement Guidelines Updated — What SMBs Need to Know",
-    summary: "The UAE Data Office has released updated enforcement guidelines under the Personal Data Protection Law. Organizations processing personal data of UAE residents must review their data inventories, consent mechanisms, and breach notification procedures.",
-    tags: ["UAE PDPL", "Privacy", "Compliance"]
+    title: "UAE PDPL Enforcement Intensifies — First Major Fines Expected in Q2 2026",
+    summary: "The UAE Data Office has signaled that enforcement actions under the Personal Data Protection Law will escalate in Q2 2026. Organizations that have not completed data inventories, appointed DPOs, or implemented breach notification procedures face significant penalties.",
+    tags: ["UAE PDPL", "Privacy", "Enforcement"]
   },
   {
-    date: "May 2025",
-    category: "Framework",
-    categoryColor: "bg-purple-100 text-purple-700",
-    title: "NIST CSF 2.0 — Key Changes and What They Mean for GCC Organizations",
-    summary: "NIST released version 2.0 of its Cybersecurity Framework, adding a new 'Govern' function and expanding guidance on supply chain risk. GCC organizations using NIST as a baseline should review the updated controls.",
-    tags: ["NIST CSF", "Framework", "Supply Chain"]
-  },
-  {
-    date: "May 2025",
+    date: "March 2026",
     category: "Threat Intel",
     categoryColor: "bg-red-100 text-red-700",
-    title: "Middle East Ransomware Attacks Up 40% — SMBs Are Primary Targets",
-    summary: "New threat intelligence reports indicate a significant increase in ransomware targeting SMBs across the UAE, Saudi Arabia, and Qatar. Attackers are exploiting unpatched systems and weak MFA implementations.",
+    title: "Ransomware Attacks on GCC SMBs Up 47% in Q1 2026",
+    summary: "New threat intelligence reports highlight a sharp increase in ransomware targeting small and mid-sized businesses across the Gulf region, with average ransom demands exceeding $250K. Unpatched systems and weak MFA remain the top entry points.",
     tags: ["Ransomware", "Threat Intel", "Middle East"]
   },
   {
-    date: "April 2025",
-    category: "Regulation",
-    categoryColor: "bg-blue-100 text-blue-700",
-    title: "Saudi Arabia NCA Releases Updated Essential Cybersecurity Controls",
-    summary: "The National Cybersecurity Authority (NCA) of Saudi Arabia has updated its Essential Cybersecurity Controls (ECC). Organizations operating in KSA should review the new requirements, particularly around cloud security and third-party risk.",
-    tags: ["NCA", "Saudi Arabia", "ECC"]
+    date: "March 2026",
+    category: "Framework",
+    categoryColor: "bg-purple-100 text-purple-700",
+    title: "ISO 27001:2022 Transition Deadline Passed — What Non-Compliant Organizations Face",
+    summary: "Organizations that missed the October 2025 transition deadline from ISO 27001:2013 to the 2022 version now face certification gaps. Auditors are flagging non-compliance with the 11 new controls covering cloud security, threat intelligence, and data masking.",
+    tags: ["ISO 27001", "Certification", "Audit"]
   },
   {
-    date: "April 2025",
+    date: "March 2026",
+    category: "Regulation",
+    categoryColor: "bg-blue-100 text-blue-700",
+    title: "NESA Releases Updated Standards for Cloud Service Providers",
+    summary: "The UAE National Electronic Security Authority has expanded its scope beyond critical infrastructure to include cloud service providers operating in the UAE. New requirements focus on data residency, shared responsibility documentation, and incident reporting.",
+    tags: ["NESA", "Cloud", "UAE"]
+  },
+  {
+    date: "February 2026",
     category: "Industry",
     categoryColor: "bg-emerald-100 text-emerald-700",
-    title: "Average Cost of a Data Breach in the Middle East Reaches $9.4M",
-    summary: "IBM's annual Cost of a Data Breach report shows the Middle East continues to have the second-highest breach costs globally. Healthcare and financial services sectors face the highest exposure.",
+    title: "Average Cost of a Data Breach in the Middle East Reaches $9.8M",
+    summary: "The latest IBM Cost of a Data Breach study shows Middle East breach costs continuing to climb, now averaging $9.8M — second highest globally. Healthcare and financial services remain the most impacted sectors.",
     tags: ["Data Breach", "Cost", "Middle East"]
   },
   {
-    date: "March 2025",
+    date: "February 2026",
     category: "Framework",
     categoryColor: "bg-purple-100 text-purple-700",
-    title: "ISO 27001:2022 Transition Deadline — Are You Ready?",
-    summary: "Organizations certified to ISO 27001:2013 must transition to the 2022 version. The updated standard introduces 11 new controls covering cloud security, threat intelligence, and data masking.",
-    tags: ["ISO 27001", "Certification", "Transition"]
+    title: "NIST CSF 2.0 Adoption Accelerating Across GCC Organizations",
+    summary: "GCC organizations are rapidly adopting NIST Cybersecurity Framework 2.0, particularly the new Govern function. The framework's emphasis on supply chain risk and board-level governance is resonating with regional regulators.",
+    tags: ["NIST CSF", "Framework", "GCC"]
   },
   {
-    date: "March 2025",
+    date: "February 2026",
     category: "Best Practice",
     categoryColor: "bg-amber-100 text-amber-700",
-    title: "FAIR Methodology Adoption Growing in GCC — Why Risk Quantification Matters",
-    summary: "More organizations across the GCC are adopting the FAIR (Factor Analysis of Information Risk) methodology to quantify cyber risk in financial terms. This shift enables better board communication and security investment decisions.",
-    tags: ["FAIR", "Risk Quantification", "GCC"]
+    title: "FAIR Methodology Gains Traction in GCC Board Rooms",
+    summary: "More CISOs across the Gulf region are adopting FAIR quantitative risk analysis to communicate cyber risk in financial terms. The shift from qualitative heat maps to dollar-value ALE reporting is enabling better board engagement and security investment decisions.",
+    tags: ["FAIR", "Risk Quantification", "Board Reporting"]
   },
   {
-    date: "February 2025",
+    date: "January 2026",
     category: "Regulation",
     categoryColor: "bg-blue-100 text-blue-700",
-    title: "DIFC and ADGM Data Protection Regulations — Key Differences Explained",
-    summary: "Organizations operating in Dubai International Financial Centre (DIFC) or Abu Dhabi Global Market (ADGM) face distinct data protection requirements. This analysis breaks down the key differences and compliance obligations.",
-    tags: ["DIFC", "ADGM", "Data Protection"]
+    title: "Saudi Arabia NCA Updates Essential Cybersecurity Controls with AI Governance Requirements",
+    summary: "The National Cybersecurity Authority of Saudi Arabia has updated its ECC framework to include AI governance requirements. Organizations deploying AI systems must now demonstrate risk assessments, transparency measures, and human oversight controls.",
+    tags: ["NCA", "Saudi Arabia", "AI Governance"]
   },
 ];
 
