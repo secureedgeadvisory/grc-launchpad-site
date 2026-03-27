@@ -112,18 +112,13 @@ const STEPS = [
 const ROADMAP = [
   {
     quarter: "Q2 2026",
-    items: ["Genie Bot (AI assistant on every page)", "PDF Report Export", "Mobile Dashboard"],
+    items: ["Genie Bot (AI assistant on every page)", "PDF Report Export", "Mobile Dashboard", "Network Scanner Agent", "Cloud Integrations (AWS/Azure/Entra ID)", "Stripe Billing", "Email-based Approvals", "Full App Documentation"],
     color: "bg-cyan-500",
   },
   {
     quarter: "Q3 2026",
-    items: ["Network Scanner Agent", "Cloud Integrations (AWS/Azure/Entra ID)", "Continuous Monitoring"],
+    items: ["External API for Integrations", "Continuous Monitoring & Drift Detection"],
     color: "bg-blue-500",
-  },
-  {
-    quarter: "Q4 2026",
-    items: ["Stripe Billing", "External API", "Full App Documentation", "Email-based Approvals"],
-    color: "bg-purple-500",
   },
 ];
 
