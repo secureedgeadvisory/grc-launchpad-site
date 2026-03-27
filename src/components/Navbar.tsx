@@ -15,6 +15,7 @@ const PRIMARY_NAV = [
 const MORE_NAV = [
   { id: "glossary", label: "Glossary" },
   { id: "news", label: "GRC News" },
+  { id: "resources", label: "Resources" },
   { id: "privacy", label: "Privacy" },
 ];
 

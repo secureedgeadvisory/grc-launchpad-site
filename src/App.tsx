@@ -8,6 +8,7 @@ import GlossaryPage from "./pages/GlossaryPage";
 import NewsPage from "./pages/NewsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import PlatformPage from "./pages/PlatformPage";
+import ResourcesPage from "./pages/ResourcesPage";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -28,6 +29,7 @@ export default function App() {
         {currentPage === "news" && <NewsPage />}
         {currentPage === "privacy" && <PrivacyPage />}
         {currentPage === "platform" && <PlatformPage onNavigate={navigate} />}
+        {currentPage === "resources" && <ResourcesPage onNavigate={navigate} />}
       </main>
       <Footer onNavigate={navigate} />
     </div>
