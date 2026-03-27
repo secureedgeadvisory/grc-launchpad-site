@@ -9,6 +9,7 @@ interface NavbarProps {
 const NAV_ITEMS = [
   { id: "home", label: "Home" },
   { id: "secureedge", label: "SecureEdge Advisory" },
+  { id: "platform", label: "GRC Platform" },
   { id: "assessment", label: "Free Assessment" },
   { id: "glossary", label: "Glossary" },
   { id: "news", label: "GRC News" },
