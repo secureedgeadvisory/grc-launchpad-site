@@ -27,9 +27,9 @@
   }
   .slide.active { display: flex; flex-direction: column; justify-content: center; }
 
-  /* Backgrounds */
+  /* Backgrounds — all dark theme */
   .bg-dark { background: linear-gradient(135deg, #0f2044 0%, #1a3a6e 100%); color: #fff; }
-  .bg-white { background: #f8fafb; color: #1e293b; }
+  .bg-white { background: linear-gradient(135deg, #112a55 0%, #0f2044 100%); color: #fff; }
   .bg-navy { background: #0f2044; color: #fff; }
 
   /* Typography */
@@ -61,11 +61,10 @@
     padding: 28px;
   }
   .card-light {
-    background: #fff;
-    border: 1px solid #e2e8f0;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
     border-radius: 16px;
     padding: 28px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
   .card h3 { margin-bottom: 8px; }
   .card p { font-size: 15px; opacity: 0.75; }
@@ -74,7 +73,7 @@
   table { width: 100%; border-collapse: collapse; font-size: 16px; }
   th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
   th { font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.5; }
-  .bg-white th, .bg-white td { border-bottom-color: #e2e8f0; }
+  .bg-white th, .bg-white td { border-bottom-color: rgba(255,255,255,0.1); }
 
   /* Badge */
   .badge {
@@ -108,7 +107,7 @@
     transition: all 0.2s;
   }
   .nav button:hover { background: rgba(255,255,255,0.25); border-color: #06b6d4; }
-  .bg-white ~ .nav button, .slide.bg-white .nav button { border-color: rgba(0,0,0,0.15); background: rgba(0,0,0,0.05); color: #0f2044; }
+  /* nav buttons are always light on dark now */
 
   .counter {
     position: fixed;
@@ -154,7 +153,7 @@
   ul { list-style: none; padding: 0; }
   ul li { padding: 6px 0; padding-left: 20px; position: relative; font-size: 17px; }
   ul li::before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; border-radius: 50%; background: #06b6d4; }
-  .bg-white ul li::before { background: #1a56db; }
+  /* all bullet dots are cyan on dark bg */
 
   /* Print */
   @media print {
@@ -268,18 +267,18 @@
   <div class="label">Why It Matters</div>
   <h2 style="margin-bottom:40px;">Risk in <span class="blue">Dollars</span>, Not Colors</h2>
   <div class="grid-2">
-    <div class="card-light" style="border: 2px solid #fee2e2;">
+    <div class="card-light" style="border: 1px solid rgba(239,68,68,0.3);">
       <h3 style="color:#ef4444;margin-bottom:16px;">Traditional GRC</h3>
       <div style="display:flex;gap:12px;margin-bottom:16px;">
-        <div style="width:60px;height:60px;background:#ef4444;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;">HIGH</div>
-        <div style="width:60px;height:60px;background:#f59e0b;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;">MED</div>
-        <div style="width:60px;height:60px;background:#10b981;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;">LOW</div>
+        <div style="width:60px;height:60px;background:rgba(239,68,68,0.3);border:1px solid rgba(239,68,68,0.5);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#ef4444;font-weight:800;font-size:14px;">HIGH</div>
+        <div style="width:60px;height:60px;background:rgba(245,158,11,0.3);border:1px solid rgba(245,158,11,0.5);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#f59e0b;font-weight:800;font-size:14px;">MED</div>
+        <div style="width:60px;height:60px;background:rgba(16,185,129,0.3);border:1px solid rgba(16,185,129,0.5);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#10b981;font-weight:800;font-size:14px;">LOW</div>
       </div>
-      <p style="font-size:15px;color:#64748b;">"This risk is High." <br><em>— What does that mean? What's the cost?</em></p>
+      <p style="font-size:15px;color:rgba(255,255,255,0.5);">"This risk is High." <br><em>— What does that mean? What's the cost?</em></p>
     </div>
-    <div class="card-light" style="border: 2px solid #d1fae5;">
+    <div class="card-light" style="border: 1px solid rgba(16,185,129,0.3);">
       <h3 style="color:#10b981;margin-bottom:16px;">SecureEdge GRC (FAIR)</h3>
-      <div style="font-family:monospace;font-size:14px;background:#f1f5f9;padding:16px;border-radius:8px;line-height:1.8;">
+      <div style="font-family:monospace;font-size:14px;background:rgba(0,0,0,0.3);padding:16px;border-radius:8px;line-height:1.8;">
         TEF (Threat Frequency) &nbsp;&nbsp;: 0.75/yr<br>
         Vulnerability &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 60%<br>
         LEF (Loss Frequency) &nbsp;&nbsp;&nbsp;: 0.45/yr<br>
@@ -287,7 +286,7 @@
         Secondary Loss &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: $95,000<br>
         <strong style="color:#1a56db;">ALE (Annual Exposure) &nbsp;&nbsp;: $123,750</strong>
       </div>
-      <p style="font-size:15px;color:#64748b;margin-top:12px;">The board understands <strong>$123,750</strong>.</p>
+      <p style="font-size:15px;color:rgba(255,255,255,0.5);margin-top:12px;">The board understands <strong>$123,750</strong>.</p>
     </div>
   </div>
 </div>
@@ -370,15 +369,15 @@
     <div style="display:flex;flex-direction:column;gap:16px;">
       <div class="card-light" style="text-align:center;">
         <div style="font-size:48px;font-weight:800;color:#1a56db;">25 min</div>
-        <div style="font-size:14px;color:#64748b;">To board-ready report</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);">To board-ready report</div>
       </div>
       <div class="card-light" style="text-align:center;">
         <div style="font-size:48px;font-weight:800;color:#10b981;">$0</div>
-        <div style="font-size:14px;color:#64748b;">No registration required</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);">No registration required</div>
       </div>
       <div class="card-light" style="text-align:center;">
         <div style="font-size:48px;font-weight:800;color:#06b6d4;">0 bytes</div>
-        <div style="font-size:14px;color:#64748b;">Data stored (privacy by design)</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);">Data stored (privacy by design)</div>
       </div>
     </div>
   </div>
@@ -428,12 +427,12 @@
   <div style="margin-top:40px;">
     <h3 style="margin-bottom:12px;">Target Segments</h3>
     <div style="display:flex;gap:12px;flex-wrap:wrap;">
-      <span style="background:#e0e7ff;color:#1a56db;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;">Financial Services</span>
-      <span style="background:#e0e7ff;color:#1a56db;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;">Healthcare</span>
-      <span style="background:#e0e7ff;color:#1a56db;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;">Technology</span>
-      <span style="background:#e0e7ff;color:#1a56db;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;">Government</span>
-      <span style="background:#e0e7ff;color:#1a56db;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;">Energy</span>
-      <span style="background:#d1fae5;color:#065f46;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;">NGOs (complimentary)</span>
+      <span style="background:rgba(26,86,219,0.2);color:#60a5fa;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;">Financial Services</span>
+      <span style="background:rgba(26,86,219,0.2);color:#60a5fa;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;">Healthcare</span>
+      <span style="background:rgba(26,86,219,0.2);color:#60a5fa;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;">Technology</span>
+      <span style="background:rgba(26,86,219,0.2);color:#60a5fa;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;">Government</span>
+      <span style="background:rgba(26,86,219,0.2);color:#60a5fa;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;">Energy</span>
+      <span style="background:rgba(16,185,129,0.2);color:#34d399;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;">NGOs (complimentary)</span>
     </div>
   </div>
 </div>
@@ -534,10 +533,10 @@
     </div>
     <div style="display:flex;align-items:center;justify-content:center;">
       <div style="text-align:center;">
-        <div style="width:160px;height:160px;background:#0f2044;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+        <div style="width:160px;height:160px;background:rgba(6,182,212,0.15);border:2px solid rgba(6,182,212,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
           <span style="font-size:64px;font-weight:800;color:#06b6d4;">PR</span>
         </div>
-        <div style="font-size:14px;color:#64748b;">Dubai, UAE</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);">Dubai, UAE</div>
       </div>
     </div>
   </div>
