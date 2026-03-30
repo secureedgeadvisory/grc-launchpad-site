@@ -88,23 +88,33 @@ const DIFFERENTIATORS = [
 const STEPS = [
   {
     icon: ClipboardCheck,
-    title: "Assess",
-    desc: "Run a 25-minute assessment across 10 security domains. Get your maturity score, ALE, and gap analysis instantly.",
+    title: "1. Assess",
+    desc: "Select your framework (NESA, ISO 27001, or NIST 800-53). Answer domain-by-domain questions. AEGIS maps your gaps and cross-framework overlaps.",
   },
   {
-    icon: Cog,
-    title: "Automate",
-    desc: "AI generates policies, maps controls to frameworks, quantifies risks using FAIR, and builds your governance hierarchy.",
+    icon: Sparkles,
+    title: "2. AEGIS Launches",
+    desc: "AI generates FAIR-quantified risks (ALE in dollars), framework-specific policies, grouped control tasks with step-by-step guides, and due dates scaled to your timeline.",
+  },
+  {
+    icon: FileText,
+    title: "3. Policies",
+    desc: "Review AI-generated policies. Submit for approval. Admin approves with tracked ref numbers. Published policies lock and become audit evidence.",
+  },
+  {
+    icon: AlertTriangle,
+    title: "4. Risk Register",
+    desc: "Every gap is a quantified risk. Full FAIR breakdown (TEF, vulnerability, LEF, ALE). Governed changes require approval. Risks auto-close when controls are completed.",
   },
   {
     icon: Shield,
-    title: "Govern",
-    desc: "Approval workflows, exception management, risk lock-down, JML tracking \u2014 everything controlled, everything auditable.",
+    title: "5. Controls",
+    desc: "3-stage lifecycle: Implement (rich guides) \u2192 Evidence (upload + AI analysis, min 5/10 to proceed) \u2192 Review (approval + locking). 98 controls covered.",
   },
   {
     icon: BarChart3,
-    title: "Report",
-    desc: "Board-ready dashboards. Executive summaries in one click. Compliance % per framework. Risk trends in dollars.",
+    title: "6. Dashboard",
+    desc: "Compliance %, certification readiness, risk heat maps, cross-framework cards, 6 report types (PDF), evidence package export. Board-ready in one click.",
   },
 ];
 
@@ -253,7 +263,7 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
       <section className="py-20 px-4 bg-gradient-to-br from-[#0f2044] via-[#1a3a6e] to-[#0f2044] text-white">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3">From Zero to Board-Ready in 4 Steps</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-3">From Zero to Board-Ready in 6 Steps</h2>
             <p className="text-gray-400 text-lg">A clear path from assessment to executive reporting</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
