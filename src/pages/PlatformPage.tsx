@@ -13,7 +13,7 @@ interface PlatformPageProps {
 /* ─── Section 2: Pain Points ─── */
 const PAIN_POINTS = [
   {
-    stat: "$500–$2,000/mo",
+    stat: "$2,000/mo",
     title: "Enterprise GRC tools price out SMBs",
     desc: "You're left choosing between expensive platforms and unmanageable spreadsheets.",
     color: "text-red-500",
@@ -21,16 +21,16 @@ const PAIN_POINTS = [
     border: "border-red-100",
   },
   {
-    stat: "78% of SMBs",
-    title: "have never completed a formal risk assessment",
+    stat: "78%",
+    title: "of SMBs have no formal risk assessment",
     desc: "They discover gaps only when an auditor or attacker finds them first.",
     color: "text-amber-500",
     bg: "bg-amber-50",
     border: "border-amber-100",
   },
   {
-    stat: "Manual = Invisible",
-    title: "Spreadsheet-based GRC means zero visibility",
+    stat: "Zero",
+    title: "Visibility with spreadsheet GRC",
     desc: "No audit trail, no dollar values, no board visibility. Risks hide until they become incidents.",
     color: "text-orange-500",
     bg: "bg-orange-50",
@@ -171,6 +171,22 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
             >
               <Eye size={18} /> See How It Works
             </button>
+          </div>
+          <div className="flex flex-row gap-4 justify-center">
+            <a
+              href="/pitch-deck.html"
+              target="_blank"
+              className="px-6 py-2.5 text-sm font-semibold rounded-xl transition-colors border border-white/30 hover:border-[#06b6d4] text-white/80 hover:text-[#06b6d4] inline-flex items-center justify-center gap-2"
+            >
+              <FileText size={15} /> Why SecureEdge GRC
+            </a>
+            <a
+              href="/feature-workflows.html"
+              target="_blank"
+              className="px-6 py-2.5 text-sm font-semibold rounded-xl transition-colors border border-white/30 hover:border-[#06b6d4] text-white/80 hover:text-[#06b6d4] inline-flex items-center justify-center gap-2"
+            >
+              <Layers size={15} /> See How It Works
+            </a>
           </div>
         </div>
       </section>
