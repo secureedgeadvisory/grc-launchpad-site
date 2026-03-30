@@ -528,24 +528,27 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0f2044] mb-3">Everything You Need. Nothing You Don't.</h2>
-            <p className="text-gray-600 text-lg">20 modules, 74 routes, 35+ APIs — built and ready</p>
+            <p className="text-gray-600 text-lg">72 pages, 40+ APIs, 98 control guides — built, deployed, and live</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Column 1 */}
+            {/* Column 1: Assessment & AI */}
             <div>
               <div className="flex items-center gap-2 mb-5">
                 <div className="bg-blue-100 rounded-lg p-2"><Target size={18} className="text-blue-600" /></div>
-                <h3 className="font-bold text-[#0f2044]">Assessment & Scoring</h3>
+                <h3 className="font-bold text-[#0f2044]">Assessment & AI</h3>
               </div>
               <ul className="space-y-3">
                 {[
-                  "Two-Tier Assessment (Quick + Deep)",
-                  "10 Security Domains, 62+ Questions",
-                  "FAIR Risk Quantification",
-                  "Industry Benchmarks (IBM, Verizon, Ponemon)",
-                  "Cross-Framework Mapping",
-                  "Reassessment Reconciliation",
-                  "Annual Validity Tracking",
+                  "3 frameworks at launch (NESA, ISO 27001, NIST 800-53)",
+                  "Domain-by-domain assessment flow",
+                  "FAIR risk quantification (ALE in dollars)",
+                  "Org-size priority thresholds",
+                  "Cross-framework bidirectional mapping",
+                  "Reassessment with risk reconciliation",
+                  "Certification timeline scaling",
+                  "AEGIS AI engine (75% automation)",
+                  "AI policy generation (framework-specific)",
+                  "AI evidence analyzer (score + auditor readiness)",
                 ].map((f, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
                     <CheckCircle size={14} className="text-blue-500 shrink-0 mt-0.5" />
@@ -555,22 +558,24 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
               </ul>
             </div>
 
-            {/* Column 2 */}
+            {/* Column 2: Risk & Policies */}
             <div>
               <div className="flex items-center gap-2 mb-5">
                 <div className="bg-emerald-100 rounded-lg p-2"><Shield size={18} className="text-emerald-600" /></div>
-                <h3 className="font-bold text-[#0f2044]">Risk & Governance</h3>
+                <h3 className="font-bold text-[#0f2044]">Risk & Policies</h3>
               </div>
               <ul className="space-y-3">
                 {[
-                  "Risk Register with FAIR ALE",
-                  "Governed Risk Changes (Approval Required)",
-                  "Auto-Residual Risk Calculation",
-                  "Policy Lifecycle (Draft \u2192 Published)",
-                  "AI Policy Generation",
-                  "Control Standards Hierarchy",
-                  "Exception Management (Max 6 Months)",
-                  "Policy Acknowledgment Tracking",
+                  "Risk register with full FAIR breakdown",
+                  "Governed risk changes (approval required)",
+                  "Auto-risk closure on control completion",
+                  "Self-healing risk consistency checks",
+                  "Policy lifecycle (Draft \u2192 Review \u2192 Published)",
+                  "AI-generated auditor-ready policies",
+                  "Policy approval with ref tracking",
+                  "PDF export for all policies",
+                  "Linked controls on risk detail",
+                  "Domain hierarchy tree view",
                 ].map((f, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
                     <CheckCircle size={14} className="text-emerald-500 shrink-0 mt-0.5" />
@@ -580,21 +585,24 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
               </ul>
             </div>
 
-            {/* Column 3 */}
+            {/* Column 3: Controls & Evidence */}
             <div>
               <div className="flex items-center gap-2 mb-5">
                 <div className="bg-purple-100 rounded-lg p-2"><Search size={18} className="text-purple-600" /></div>
-                <h3 className="font-bold text-[#0f2044]">Compliance & Evidence</h3>
+                <h3 className="font-bold text-[#0f2044]">Controls & Evidence</h3>
               </div>
               <ul className="space-y-3">
                 {[
-                  "8 Framework Support",
-                  "Evidence Library with AI Scoring",
-                  "Document Template Library",
-                  "AI Evidence Analyzer",
-                  "Compliance % Dashboard",
-                  "Control Confidence Levels",
-                  "Audit-Ready Documentation",
+                  "3-stage lifecycle (Implement \u2192 Evidence \u2192 Review)",
+                  "98 rich step-by-step control guides",
+                  "Evidence upload with DB audit trail",
+                  "AI evidence scoring (min 5/10 to proceed)",
+                  "Approval workflow with locking",
+                  "Completed controls lock (forward-only)",
+                  "18 downloadable templates (Excel/DOCX)",
+                  "Compliance % dashboard (real-time)",
+                  "Cross-framework compliance cards",
+                  "Certification readiness indicator",
                 ].map((f, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
                     <CheckCircle size={14} className="text-purple-500 shrink-0 mt-0.5" />
@@ -604,22 +612,28 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
               </ul>
             </div>
 
-            {/* Column 4 */}
+            {/* Column 4: Platform & Operations */}
             <div>
               <div className="flex items-center gap-2 mb-5">
                 <div className="bg-amber-100 rounded-lg p-2"><Users size={18} className="text-amber-600" /></div>
-                <h3 className="font-bold text-[#0f2044]">Operations & People</h3>
+                <h3 className="font-bold text-[#0f2044]">Platform & Operations</h3>
               </div>
               <ul className="space-y-3">
                 {[
-                  "Role-Based Dashboards (5 Roles)",
-                  "Multi-Level Approval Workflows",
-                  "Projects & Budget with ROI",
-                  "People & Org Structure",
-                  "Joiner/Mover/Leaver Process",
-                  "CSV Import + AD Sync (Coming)",
-                  "7-Step Setup Wizard",
-                  "Board Reports with AI Summaries",
+                  "Immutable audit trail (every action logged)",
+                  "Field-level change tracking (old \u2192 new)",
+                  "CSV export for auditors",
+                  "5 roles (Owner, Admin, Member, Viewer, Auditor)",
+                  "Access matrix with permission table",
+                  "People & teams management",
+                  "3-step onboarding (Company \u2192 Environment \u2192 Team)",
+                  "6 report types with PDF export",
+                  "Board reports with AI summaries",
+                  "Compliance calendar (22 periodic reviews)",
+                  "Audit findings with remediation workflow",
+                  "Framework reference library",
+                  "Email notifications (task, approval, overdue)",
+                  "Auto-computed certification status",
                 ].map((f, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
                     <CheckCircle size={14} className="text-amber-500 shrink-0 mt-0.5" />
