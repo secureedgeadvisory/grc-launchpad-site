@@ -266,9 +266,10 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
             <h2 className="text-3xl sm:text-4xl font-bold mb-3">From Zero to Board-Ready in 6 Steps</h2>
             <p className="text-gray-400 text-lg">A clear path from assessment to executive reporting</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative">
-            {/* Connecting line (desktop only) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 relative">
+            {/* Connecting lines — row 1 and row 2 (desktop only) */}
             <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-cyan-500/50 via-blue-500/50 to-purple-500/50" />
+            <div className="hidden lg:block absolute top-[calc(50%+24px)] left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-cyan-500/50 via-blue-500/50 to-purple-500/50" />
             {STEPS.map((s, i) => (
               <div key={i} className="text-center relative">
                 <div className="w-20 h-20 bg-gradient-to-br from-[#1a56db] to-[#06b6d4] rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-blue-500/25 relative z-10">
