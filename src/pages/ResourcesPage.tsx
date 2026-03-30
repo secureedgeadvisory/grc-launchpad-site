@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import {
   Search, ChevronDown, ChevronUp, ExternalLink, BookOpen, Lock,
-  Landmark, Globe, Shield, BarChart3, GraduationCap, FileText,
+  Landmark, Globe, Shield, GraduationCap, FileText,
   Users, AlertTriangle, Clock, Calendar,
 } from "lucide-react";
 
@@ -359,7 +359,7 @@ const COMING_SOON: ComingSoon[] = [
 ];
 
 /* ─── Component ─── */
-export default function ResourcesPage({ onNavigate }: ResourcesPageProps) {
+export default function ResourcesPage({ onNavigate: _onNavigate }: ResourcesPageProps) {
   const [activeTab, setActiveTab] = useState<"library" | "hub">("library");
   const [searchQuery, setSearchQuery] = useState("");
   const [pricingFilter, setPricingFilter] = useState<Pricing | "All">("All");
@@ -493,7 +493,7 @@ export default function ResourcesPage({ onNavigate }: ResourcesPageProps) {
 
             {/* Categories */}
             <div className="space-y-4">
-              {filteredCategories.map((cat, catIdx) => {
+              {filteredCategories.map((cat, _catIdx) => {
                 const originalIdx = CATEGORIES.findIndex(
                   (c) => c.title === cat.title
                 );

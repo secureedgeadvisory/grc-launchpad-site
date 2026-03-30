@@ -39,12 +39,12 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             <span>Free · No Registration · Privacy by Design</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Know Where You Stand<br />
-            <span className="text-[#06b6d4]">Before the Auditor Does</span>
+            Enterprise GRC.<br />
+            <span className="text-[#06b6d4]">Zero Complexity.</span>
           </h1>
           <p className="text-xl text-gray-300 mb-4 max-w-3xl mx-auto">
-            GRC Launchpad is a free, FAIR-based pre-audit security assessment tool for SMBs across the UAE and GCC.
-            Get your maturity score, risk exposure in dollar terms, and a prioritized remediation roadmap — instantly.
+            AI-powered governance, risk & compliance for UAE & GCC organizations.
+            Start with a free assessment — upgrade to the full platform when you're ready.
           </p>
           <p className="text-sm text-[#06b6d4] mb-8">
             NGOs receive complimentary advisory services. No exceptions.
@@ -63,6 +63,9 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               About SecureEdge Advisory
             </button>
           </div>
+          <p className="text-sm text-gray-400 mt-6">
+            Powered by <span className="text-[#06b6d4] font-semibold">AEGIS</span> — our AI engine that automates 75% of compliance work
+          </p>
         </div>
       </section>
 
@@ -105,7 +108,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-16 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-[#0f2044] mb-3">What GRC Launchpad Gives You</h2>
+            <h2 className="text-3xl font-bold text-[#0f2044] mb-3">What SecureEdge GRC Gives You</h2>
             <p className="text-gray-600">Everything you need to understand and communicate your security posture</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -172,9 +175,12 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             Security awareness shouldn't be gated behind enterprise pricing. Every organization — regardless of size or budget —
             deserves to understand their risk exposure.
           </p>
-          <p className="text-gray-600 mb-6">
-            GRC Launchpad is our way of giving back to the community. The diagnosis is always free.
+          <p className="text-gray-600 mb-4">
+            SecureEdge GRC is our way of giving back to the community. The diagnosis is always free.
             If you need help fixing what you find, SecureEdge Advisory is here.
+          </p>
+          <p className="text-gray-600 mb-6">
+            When you're ready for the full platform — risk registers, policy automation, evidence management, and audit trail — request beta access.
           </p>
           <div className="bg-white rounded-xl p-4 border border-emerald-200 inline-block">
             <p className="text-emerald-700 font-semibold">
@@ -199,10 +205,10 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               Start Free Assessment →
             </button>
             <a
-              href="mailto:info@secureedgeadvisory.com"
+              href="mailto:info@secureedgeadvisory.com?subject=SecureEdge%20GRC%20Enquiry"
               className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl text-lg transition-colors border border-white/30"
             >
-              Book a Consultation
+              Contact Us
             </a>
           </div>
         </div>

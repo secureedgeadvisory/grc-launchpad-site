@@ -14,13 +14,14 @@ export default function Footer({ onNavigate }: FooterProps) {
               <div className="bg-[#1a56db] rounded-lg p-1.5">
                 <Shield size={20} className="text-white" />
               </div>
-              <span className="text-white font-bold text-lg">GRC Launchpad™</span>
+              <span className="text-white font-bold text-lg">SecureEdge GRC</span>
             </div>
             <p className="text-sm text-gray-400 mb-3">
-              A free pre-audit GRC self-assessment tool by SecureEdge Advisory.
-              Helping SMBs across the UAE and GCC understand their security posture
-              before the auditor does.
+              AI-powered governance, risk & compliance platform by SecureEdge Advisory.
+              Helping organizations across the UAE and GCC automate compliance
+              and quantify risk in dollar terms.
             </p>
+            <p className="text-xs text-[#06b6d4] font-medium mb-2">Powered by AEGIS</p>
             <p className="text-xs text-gray-500">
               Aligned to: ISO 27001 · NIST CSF · NESA · UAE PDPL · GDPR · SOX · COBIT · CIS v8 · FAIR
             </p>
@@ -75,7 +76,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         </div>
 
         <div className="border-t border-white/10 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500">
-          <p>© 2026 SecureEdge Advisory. All rights reserved. GRC Launchpad™ is a trademark of SecureEdge Advisory.</p>
+          <p>© 2026 SecureEdge Advisory. All rights reserved. SecureEdge GRC is a trademark of SecureEdge Advisory.</p>
           <p>This assessment framework is proprietary. Redistribution without permission is prohibited.</p>
         </div>
       </div>

@@ -131,7 +131,7 @@ export default function ResultsPage({ results, onRestart }: ResultsPageProps) {
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <Shield size={20} className="text-[#06b6d4]" />
-                <span className="text-[#06b6d4] font-semibold text-sm">GRC Launchpad™ Pre-Audit Report</span>
+                <span className="text-[#06b6d4] font-semibold text-sm">SecureEdge GRC Pre-Audit Report</span>
               </div>
               <h1 className="text-2xl font-bold mb-1">{results.orgName}</h1>
               <p className="text-gray-400 text-sm">{results.industry} · {results.orgSize}</p>
@@ -230,17 +230,17 @@ export default function ResultsPage({ results, onRestart }: ResultsPageProps) {
         {/* CTA */}
         <div className="bg-[#1a56db] text-white rounded-2xl p-8 mb-6 text-center">
           <Shield size={32} className="mx-auto mb-3 text-[#06b6d4]" />
-          <h2 className="text-2xl font-bold mb-2">Need Help Closing These Gaps?</h2>
+          <h2 className="text-2xl font-bold mb-2">Ready to Close These Gaps?</h2>
           <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-            SecureEdge Advisory provides vCISO services and specialized GRC engagements to help SMBs across the UAE and GCC
-            build audit-ready security programs. Let's talk about your results.
+            SecureEdge GRC Platform automates remediation with AI-powered policy generation, FAIR risk quantification,
+            step-by-step control guides, and auditor-ready evidence management.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="mailto:info@secureedgeadvisory.com?subject=GRC Assessment Results - Consultation Request"
+              href="mailto:info@secureedgeadvisory.com?subject=SecureEdge%20GRC%20Platform%20Access&body=Hi%2C%20I%20just%20completed%20the%20free%20assessment%20and%20would%20like%20access%20to%20the%20full%20SecureEdge%20GRC%20Platform."
               className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-[#1a56db] font-bold rounded-xl hover:bg-blue-50 transition-colors"
             >
-              <Mail size={16} /> Book a Free Consultation
+              <Mail size={16} /> Request Platform Access
             </a>
             <button
               onClick={() => window.print()}
@@ -259,7 +259,7 @@ export default function ResultsPage({ results, onRestart }: ResultsPageProps) {
 
         {/* Footer note */}
         <div className="text-center text-xs text-gray-400 pb-8">
-          <p>© 2026 SecureEdge Advisory. All rights reserved. GRC Launchpad™ is a trademark of SecureEdge Advisory.</p>
+          <p>© 2026 SecureEdge Advisory. All rights reserved. SecureEdge GRC is a trademark of SecureEdge Advisory.</p>
           <p className="mt-1">This report is generated client-side. No data was transmitted or stored. For advisory services: info@secureedgeadvisory.com</p>
         </div>
       </div>

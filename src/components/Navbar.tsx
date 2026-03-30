@@ -8,7 +8,7 @@ interface NavbarProps {
 
 const PRIMARY_NAV = [
   { id: "secureedge", label: "Advisory" },
-  { id: "platform", label: "GRC Platform" },
+  { id: "platform", label: "Platform" },
   { id: "assessment", label: "Free Assessment" },
 ];
 
@@ -34,7 +34,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
             <div className="bg-[#1a56db] rounded-lg p-1.5">
               <Shield size={20} className="text-white" />
             </div>
-            <span className="hidden sm:block">GRC Launchpad</span>
+            <span className="hidden sm:block">SecureEdge GRC</span>
           </button>
 
           {/* Desktop nav */}

@@ -1,6 +1,6 @@
 import {
   Shield, Brain, DollarSign, Link2, Globe, Sparkles, ShieldCheck,
-  ClipboardCheck, Cog, BarChart3, FileText, Search, Zap, Users,
+  ClipboardCheck, Cog, BarChart3, FileText, Search, Users,
   Calendar, ArrowRight, CheckCircle, Lock,
   AlertTriangle, Eye,
   Layers, Target, Award
@@ -42,43 +42,43 @@ const PAIN_POINTS = [
 const DIFFERENTIATORS = [
   {
     icon: Brain,
-    title: "AI at the Core",
-    desc: "Not a bolt-on. Claude AI generates policies, analyzes evidence, writes board summaries, and pre-fills every form. 75% automation, not 75% manual.",
+    title: "AEGIS AI Engine",
+    desc: "Generates policies, quantifies risks with FAIR, analyzes evidence, and auto-closes tasks. 75% automation.",
     color: "text-purple-500",
     bg: "bg-purple-50",
   },
   {
     icon: DollarSign,
-    title: "Risk in Dollars, Not Colors",
-    desc: "FAIR methodology quantifies every risk as Annualized Loss Expectancy (ALE). Your board sees $180K exposure, not 'High' on a traffic light.",
+    title: "FAIR Risk Quantification",
+    desc: "Every risk has a dollar value — Annual Loss Expectancy calculated from TEF, vulnerability, and loss magnitudes.",
     color: "text-emerald-500",
     bg: "bg-emerald-50",
   },
   {
     icon: Link2,
-    title: "Interconnected by Design",
-    desc: "Policy \u2192 Control \u2192 Exception \u2192 Risk \u2192 Project \u2192 Resolution. Nothing hides. Every exception increases ALE. Every fix reduces it.",
+    title: "3-Stage Control Lifecycle",
+    desc: "Implement → Evidence → Review. Step-by-step guides, file upload, AI analysis, approval workflow with locking.",
     color: "text-blue-500",
     bg: "bg-blue-50",
   },
   {
     icon: Globe,
     title: "Built for UAE & GCC",
-    desc: "NESA, UAE PDPL, SAMA, NCA ECC built-in alongside ISO 27001, NIST, GDPR, SOX. Regional benchmarks and multipliers. Not another US-centric tool.",
+    desc: "NESA, ISO 27001, NIST 800-53 with cross-framework bidirectional mapping. More frameworks coming.",
     color: "text-cyan-500",
     bg: "bg-cyan-50",
   },
   {
-    icon: Zap,
-    title: "Zero Friction UX",
-    desc: "Pre-filled forms. One-click approvals. AI-drafted everything. If your team has to write paragraphs or fill spreadsheets, we've failed.",
+    icon: Lock,
+    title: "Immutable Audit Trail",
+    desc: "Every action logged. Field-level change tracking. CSV export for auditors. Zero tampering.",
     color: "text-amber-500",
     bg: "bg-amber-50",
   },
   {
     icon: ShieldCheck,
-    title: "Auditor-Proof",
-    desc: "Every risk change goes through governed approval. Full audit trail. Evidence scored by AI. Your ISO 27001 auditor will love you.",
+    title: "Auditor-Ready Reports",
+    desc: "Board reports, risk reports, compliance reports, evidence packages — all exportable as PDF.",
     color: "text-red-500",
     bg: "bg-red-50",
   },
@@ -112,70 +112,26 @@ const STEPS = [
 const ROADMAP = [
   {
     quarter: "Q2 2026",
-    items: ["Genie Bot (AI assistant on every page)", "PDF Report Export", "Mobile Dashboard", "Network Scanner Agent", "Cloud Integrations (AWS/Azure/Entra ID)", "Stripe Billing", "Email-based Approvals", "Full App Documentation"],
+    items: ["Additional frameworks (CIS, GDPR, SOC 2, PCI DSS)", "Email notifications", "Vendor management module", "Mobile responsive", "AEGIS Genie Bot (AI assistant)"],
     color: "bg-cyan-500",
   },
   {
     quarter: "Q3 2026",
-    items: ["External API for Integrations", "Continuous Monitoring & Drift Detection"],
+    items: ["Operational GRC mode (continuous monitoring)", "Network scanner agent", "Cloud integrations (AWS/Azure)", "Stripe billing", "Multi-project support"],
     color: "bg-blue-500",
   },
 ];
 
 /* ─── Section 8: Pricing ─── */
-const PRICING = [
-  {
-    name: "Free",
-    price: "$0",
-    period: "forever",
-    desc: "Assessment only on GRC Launchpad. No registration required.",
-    features: ["10-Domain Assessment", "FAIR Risk Scoring", "Maturity Report", "Zero Data Stored"],
-    cta: "Start Free Assessment",
-    highlight: false,
-  },
-  {
-    name: "Starter",
-    price: "$49",
-    period: "/month",
-    desc: "Assessment + Risk Register + 5 AI Policies + Dashboard",
-    features: ["Everything in Free", "Risk Register", "5 AI-Generated Policies", "Role-Based Dashboard", "CSV Export"],
-    cta: "Request Access",
-    highlight: false,
-  },
-  {
-    name: "Professional",
-    price: "$149",
-    period: "/month",
-    desc: "Full suite + Unlimited AI + Multi-framework + Board Reports",
-    features: [
-      "Everything in Starter",
-      "Unlimited AI Generation",
-      "8 Framework Support",
-      "Board Reports & Trends",
-      "Exception Management",
-      "Evidence Library & AI Analyzer",
-      "Approval Workflows",
-    ],
-    cta: "Request Access",
-    highlight: true,
-    badge: "Most Popular",
-  },
-  {
-    name: "Business",
-    price: "$299",
-    period: "/month",
-    desc: "Everything + API Access + Integrations + Priority Support",
-    features: [
-      "Everything in Professional",
-      "External API Access",
-      "Cloud Integrations",
-      "Priority Support",
-      "Custom Risk Calibration",
-      "Dedicated Onboarding",
-    ],
-    cta: "Contact Sales",
-    highlight: false,
-  },
+const BETA_FEATURES = [
+  "3 frameworks (NESA, ISO 27001, NIST 800-53)",
+  "AI-powered policy generation",
+  "FAIR risk quantification",
+  "Evidence management & AI analysis",
+  "Approval workflows",
+  "Immutable audit trail",
+  "Board-ready reports",
+  "Unlimited users during beta",
 ];
 
 export default function PlatformPage({ onNavigate }: PlatformPageProps) {
@@ -192,19 +148,19 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
         <div className="max-w-5xl mx-auto text-center relative">
           <div className="inline-flex items-center gap-2 bg-[#1a56db]/30 border border-[#1a56db]/50 rounded-full px-5 py-2 text-sm text-[#06b6d4] mb-8">
             <Sparkles size={14} />
-            <span>AI-Powered GRC Platform — Built for the UAE & GCC</span>
+            <span>Beta Access — Free During Early Access</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Stop Managing Compliance<br />
             <span className="text-[#06b6d4]">in Spreadsheets</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            SecureEdge GRC automates 75% of your governance, risk, and compliance operations.
+            Powered by <span className="text-[#06b6d4] font-semibold">AEGIS</span> — our AI engine that automates 75% of compliance work.
             Quantify risk in dollars. Generate policies with AI. Deliver board-ready reports — in minutes, not months.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
-              href="mailto:info@secureedgeadvisory.com?subject=GRC Platform Beta Access Request"
+              href="mailto:info@secureedgeadvisory.com?subject=SecureEdge%20GRC%20Beta%20Access%20Request&body=Hi%2C%20I%20would%20like%20to%20request%20beta%20access%20to%20SecureEdge%20GRC%20Platform."
               className="px-8 py-4 bg-[#06b6d4] hover:bg-cyan-400 text-[#0f2044] font-bold rounded-xl text-lg transition-all transform hover:scale-105 shadow-lg shadow-cyan-500/25 inline-flex items-center justify-center gap-2"
             >
               Request Beta Access <ArrowRight size={18} />
@@ -213,7 +169,7 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
               onClick={() => onNavigate("assessment")}
               className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl text-lg transition-colors border border-white/20 inline-flex items-center justify-center gap-2"
             >
-              <Eye size={18} /> Watch Demo
+              <Eye size={18} /> See How It Works
             </button>
           </div>
         </div>
@@ -695,64 +651,40 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
 
       {/* ════════════════════════════ SECTION 8: PRICING ════════════════════════════ */}
       <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0f2044] mb-3">Pricing That Makes Sense for SMBs</h2>
-            <p className="text-gray-600 text-lg">Start free. Scale when you're ready.</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0f2044] mb-3">Simple Pricing</h2>
+            <p className="text-gray-600 text-lg">Full platform access during beta. No strings attached.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {PRICING.map((p, i) => (
-              <div
-                key={i}
-                className={`rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 relative ${
-                  p.highlight
-                    ? "bg-[#0f2044] text-white border-2 border-[#06b6d4] shadow-xl shadow-cyan-500/10"
-                    : "bg-white border border-gray-200 shadow-sm hover:shadow-lg"
-                }`}
-              >
-                {p.badge && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-[#06b6d4] text-[#0f2044] text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">
-                      {p.badge}
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-5">
-                  <h3 className={`font-bold text-lg mb-1 ${p.highlight ? "text-white" : "text-[#0f2044]"}`}>{p.name}</h3>
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className={`text-4xl font-bold ${p.highlight ? "text-[#06b6d4]" : "text-[#0f2044]"}`}>{p.price}</span>
-                    <span className={`text-sm ${p.highlight ? "text-gray-400" : "text-gray-500"}`}>{p.period}</span>
-                  </div>
-                </div>
-                <p className={`text-sm mb-5 text-center ${p.highlight ? "text-gray-400" : "text-gray-600"}`}>{p.desc}</p>
-                <ul className="space-y-2 mb-6">
-                  {p.features.map((f, fi) => (
-                    <li key={fi} className={`flex items-start gap-2 text-sm ${p.highlight ? "text-gray-300" : "text-gray-700"}`}>
-                      <CheckCircle size={14} className={`shrink-0 mt-0.5 ${p.highlight ? "text-[#06b6d4]" : "text-emerald-500"}`} />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <button
-                  onClick={() => {
-                    if (p.name === "Free") onNavigate("assessment");
-                    else window.location.href = "mailto:info@secureedgeadvisory.com?subject=" + encodeURIComponent(`GRC Platform ${p.name} Tier Enquiry`);
-                  }}
-                  className={`w-full py-3 rounded-xl font-semibold text-sm transition-all ${
-                    p.highlight
-                      ? "bg-[#06b6d4] hover:bg-cyan-400 text-[#0f2044]"
-                      : "bg-[#0f2044] hover:bg-[#1a3a6e] text-white"
-                  }`}
-                >
-                  {p.cta}
-                </button>
-              </div>
-            ))}
+          <div className="bg-[#0f2044] text-white border-2 border-[#06b6d4] shadow-xl shadow-cyan-500/10 rounded-2xl p-8 relative">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+              <span className="bg-[#06b6d4] text-[#0f2044] text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">
+                Early Access
+              </span>
+            </div>
+            <div className="text-center mb-6">
+              <h3 className="font-bold text-2xl text-white mb-1">Early Access — Free</h3>
+              <p className="text-gray-400 text-sm">Full platform access during beta. No credit card required.</p>
+            </div>
+            <ul className="space-y-3 mb-8">
+              {BETA_FEATURES.map((f, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                  <CheckCircle size={14} className="text-[#06b6d4] shrink-0 mt-0.5" />
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <a
+              href="mailto:info@secureedgeadvisory.com?subject=SecureEdge%20GRC%20Beta%20Access%20Request"
+              className="block w-full py-3 rounded-xl font-semibold text-sm text-center bg-[#06b6d4] hover:bg-cyan-400 text-[#0f2044] transition-all"
+            >
+              Request Beta Access
+            </a>
           </div>
           <div className="text-center mt-8">
             <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 rounded-xl px-6 py-3">
               <Globe size={16} className="text-emerald-600" />
-              <span className="text-emerald-700 font-semibold text-sm">NGOs receive free Professional tier. No exceptions. No questions.</span>
+              <span className="text-emerald-700 font-semibold text-sm">NGOs receive complimentary access. No exceptions.</span>
             </div>
           </div>
         </div>
