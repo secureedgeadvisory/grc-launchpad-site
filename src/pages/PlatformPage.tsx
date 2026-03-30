@@ -1,6 +1,6 @@
 import {
   Shield, Brain, DollarSign, Link2, Globe, Sparkles, ShieldCheck,
-  ClipboardCheck, Cog, BarChart3, FileText, Search, Users,
+  ClipboardCheck, BarChart3, FileText, Search, Users,
   Calendar, ArrowRight, CheckCircle, Lock,
   AlertTriangle, Eye,
   Layers, Target, Award
@@ -205,7 +205,7 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
       <section className="bg-[#0a1830] py-4 px-4">
         <div className="max-w-5xl mx-auto flex items-center justify-center gap-3 flex-wrap">
           <span className="text-gray-500 text-xs font-medium whitespace-nowrap">Frameworks supported:</span>
-          {["ISO 27001", "NIST CSF", "NESA", "GDPR", "SOX", "PCI DSS", "CIS v8", "FAIR"].map(f => (
+          {["NESA UAE", "ISO 27001:2022", "NIST 800-53", "FAIR Methodology", "CIS v8 (Coming)", "GDPR (Coming)", "SOC 2 (Coming)", "PCI DSS (Coming)"].map(f => (
             <span key={f} className="text-xs text-gray-400 bg-white/5 border border-white/10 rounded-full px-3 py-1 whitespace-nowrap">
               {f}
             </span>
@@ -266,7 +266,7 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
             <h2 className="text-3xl sm:text-4xl font-bold mb-3">From Zero to Board-Ready in 6 Steps</h2>
             <p className="text-gray-400 text-lg">A clear path from assessment to executive reporting</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative">
             {/* Connecting line (desktop only) */}
             <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-cyan-500/50 via-blue-500/50 to-purple-500/50" />
             {STEPS.map((s, i) => (
@@ -322,7 +322,7 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
                   </div>
                   <div className="bg-white/5 rounded-lg p-2 flex items-center gap-2">
                     <Layers size={12} className="text-cyan-400" />
-                    <span className="text-xs text-gray-300">4 Frameworks</span>
+                    <span className="text-xs text-gray-300">3 Frameworks</span>
                   </div>
                 </div>
               </div>
@@ -404,7 +404,7 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
               </div>
               <div className="p-5">
                 <h3 className="font-bold text-[#0f2044] mb-1">FAIR Risk Quantification</h3>
-                <p className="text-gray-600 text-sm">Every risk broken down into TEF, Vulnerability, LEF, and dollar-value loss. Transparent methodology with industry benchmarks.</p>
+                <p className="text-gray-600 text-sm">Every risk broken down into TEF, Vulnerability, LEF, and dollar-value ALE. Transparent methodology scaled by industry and org size.</p>
               </div>
             </div>
 
@@ -455,11 +455,10 @@ export default function PlatformPage({ onNavigate }: PlatformPageProps) {
                 </div>
                 <div className="space-y-3">
                   {[
-                    { name: "ISO 27001", pct: 67, color: "from-emerald-500 to-emerald-400" },
-                    { name: "NIST CSF 2.0", pct: 54, color: "from-blue-500 to-blue-400" },
-                    { name: "NESA UAE", pct: 41, color: "from-amber-500 to-amber-400" },
-                    { name: "GDPR", pct: 73, color: "from-purple-500 to-purple-400" },
-                    { name: "SOX ITGC", pct: 58, color: "from-cyan-500 to-cyan-400" },
+                    { name: "NESA UAE", pct: 100, color: "from-emerald-500 to-emerald-400" },
+                    { name: "ISO 27001:2022", pct: 69, color: "from-blue-500 to-blue-400" },
+                    { name: "NIST 800-53", pct: 51, color: "from-amber-500 to-amber-400" },
+                    { name: "CIS Controls v8", pct: 56, color: "from-cyan-500 to-cyan-400" },
                   ].map((fw, i) => (
                     <div key={i}>
                       <div className="flex justify-between items-center mb-1">
