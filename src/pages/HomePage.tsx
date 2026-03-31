@@ -163,26 +163,32 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         </div>
       </section>
 
-      {/* Framework logos bar */}
-      <section className="bg-[#0a1830] py-10 px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-6">
-            <span className="text-gray-500 text-xs font-semibold uppercase tracking-widest">Frameworks we cover</span>
-          </div>
-          <div className="grid grid-cols-4 sm:grid-cols-8 gap-4">
-            {FRAMEWORKS.map(fw => (
-              <div key={fw.abbr} className="flex flex-col items-center gap-2 group cursor-default">
-                <div className={`w-14 h-14 bg-gradient-to-br ${fw.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200`}>
-                  <span className="text-sm font-black text-white tracking-tight">{fw.abbr}</span>
-                </div>
-                <div className="text-center">
-                  <div className="text-[10px] font-semibold text-white">{fw.name}</div>
-                  <div className="text-[8px] text-gray-500">{fw.desc}</div>
-                </div>
+      {/* Framework trust strip — infinite scroll ticker */}
+      <section className="bg-[#0a1830] py-5 overflow-hidden relative">
+        {/* Fade edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#0a1830] to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#0a1830] to-transparent z-10" />
+
+        <div className="flex animate-scroll gap-8 whitespace-nowrap">
+          {[...FRAMEWORKS, ...FRAMEWORKS].map((fw, i) => (
+            <div key={`${fw.abbr}-${i}`} className="flex items-center gap-3 shrink-0">
+              <div className={`w-10 h-10 bg-gradient-to-br ${fw.color} rounded-xl flex items-center justify-center shadow-md`}>
+                <span className="text-[10px] font-black text-white">{fw.abbr}</span>
               </div>
-            ))}
-          </div>
+              <div>
+                <div className="text-sm font-semibold text-white">{fw.name}</div>
+                <div className="text-[10px] text-gray-500">{fw.desc}</div>
+              </div>
+              <div className="w-px h-8 bg-white/10 ml-4" />
+            </div>
+          ))}
         </div>
+
+        <style>{`
+          @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+          .animate-scroll { animation: scroll 30s linear infinite; }
+          .animate-scroll:hover { animation-play-state: paused; }
+        `}</style>
       </section>
 
       {/* Pain points */}
