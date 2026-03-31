@@ -88,7 +88,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   <div className="w-2.5 h-2.5 rounded-full bg-red-400/60" />
                   <div className="w-2.5 h-2.5 rounded-full bg-amber-400/60" />
                   <div className="w-2.5 h-2.5 rounded-full bg-green-400/60" />
-                  <span className="text-[10px] text-gray-600 ml-2">app.secureedgegrc.com</span>
+                  <span className="text-[10px] text-gray-600 ml-2">SecureEdge GRC Dashboard</span>
                 </div>
 
                 {/* Mock KPIs */}
