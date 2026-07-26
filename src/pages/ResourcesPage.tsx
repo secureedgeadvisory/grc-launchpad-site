@@ -27,11 +27,11 @@ interface Category {
 
 /* ─── Pricing badge styles ─── */
 const PRICING_STYLES: Record<Pricing, string> = {
-  Free: "bg-emerald-100 text-emerald-700",
-  Paid: "bg-amber-100 text-amber-700",
-  Freemium: "bg-blue-100 text-blue-700",
-  Gov: "bg-slate-100 text-slate-700",
-  Membership: "bg-purple-100 text-purple-700",
+  Free: "bg-emerald-500/20 text-emerald-400",
+  Paid: "bg-amber-500/20 text-amber-400",
+  Freemium: "bg-blue-500/20 text-blue-400",
+  Gov: "bg-slate-500/20 text-slate-400",
+  Membership: "bg-purple-500/20 text-purple-400",
 };
 
 const PRICING_FILTERS: (Pricing | "All")[] = ["All", "Free", "Paid", "Freemium", "Gov", "Membership"];
@@ -407,16 +407,16 @@ export default function ResourcesPage({ onNavigate: _onNavigate }: ResourcesPage
   const totalResources = filteredCategories.reduce((s, c) => s + c.resources.length, 0);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#0a0f1e]">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#0f2044] via-[#1a3a6e] to-[#0f2044] text-white py-16 px-4">
+      <section className="bg-gradient-to-br from-[#0a0f1e] via-[#0f1a3a] to-[#0a0f1e] text-white py-16 px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-[#1a56db]/30 border border-[#1a56db]/50 rounded-full px-4 py-1.5 text-sm text-[#06b6d4] mb-6">
+          <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 text-sm text-blue-400 mb-6">
             <BookOpen size={14} />
             <span>Curated for GRC Professionals</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
-            Resources & <span className="text-[#06b6d4]">Knowledge Hub</span>
+            Resources & <span className="text-blue-400">Knowledge Hub</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Standards, regulators, tools, training, and insights — everything a GRC practitioner needs in one place.
@@ -425,15 +425,15 @@ export default function ResourcesPage({ onNavigate: _onNavigate }: ResourcesPage
       </section>
 
       {/* Tab switcher */}
-      <section className="bg-gray-50 border-b border-gray-200 px-4">
+      <section className="bg-[#0d1322] border-b border-white/5 px-4">
         <div className="max-w-5xl mx-auto flex justify-center py-4">
-          <div className="inline-flex bg-white rounded-xl border border-gray-200 p-1 shadow-sm">
+          <div className="inline-flex bg-white/5 rounded-xl border border-white/10 p-1">
             <button
               onClick={() => setActiveTab("library")}
               className={`px-6 py-2.5 rounded-lg text-sm font-semibold transition-colors ${
                 activeTab === "library"
-                  ? "bg-[#1a56db] text-white shadow-sm"
-                  : "text-gray-600 hover:text-[#0f2044] hover:bg-gray-50"
+                  ? "bg-blue-600 text-white"
+                  : "text-gray-400 hover:text-white hover:bg-white/5"
               }`}
             >
               Resource Library
@@ -442,8 +442,8 @@ export default function ResourcesPage({ onNavigate: _onNavigate }: ResourcesPage
               onClick={() => setActiveTab("hub")}
               className={`px-6 py-2.5 rounded-lg text-sm font-semibold transition-colors ${
                 activeTab === "hub"
-                  ? "bg-[#1a56db] text-white shadow-sm"
-                  : "text-gray-600 hover:text-[#0f2044] hover:bg-gray-50"
+                  ? "bg-blue-600 text-white"
+                  : "text-gray-400 hover:text-white hover:bg-white/5"
               }`}
             >
               Knowledge Hub
@@ -461,14 +461,14 @@ export default function ResourcesPage({ onNavigate: _onNavigate }: ResourcesPage
               <div className="relative">
                 <Search
                   size={18}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"
                 />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search resources..."
-                  className="w-full pl-11 pr-4 py-3 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#1a56db]/30 focus:border-[#1a56db] shadow-sm"
+                  className="w-full pl-11 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div className="flex flex-wrap gap-2">
@@ -478,14 +478,14 @@ export default function ResourcesPage({ onNavigate: _onNavigate }: ResourcesPage
                     onClick={() => setPricingFilter(f)}
                     className={`px-4 py-1.5 rounded-full text-xs font-semibold border transition-colors ${
                       pricingFilter === f
-                        ? "bg-[#1a56db] text-white border-[#1a56db]"
-                        : "bg-white text-gray-600 border-gray-200 hover:border-[#1a56db] hover:text-[#1a56db]"
+                        ? "bg-blue-600 text-white border-blue-600"
+                        : "bg-white/5 text-gray-400 border-white/10 hover:border-blue-500/30 hover:text-blue-400"
                     }`}
                   >
                     {f}
                   </button>
                 ))}
-                <span className="ml-auto text-xs text-gray-400 self-center">
+                <span className="ml-auto text-xs text-gray-500 self-center">
                   {totalResources} resource{totalResources !== 1 ? "s" : ""}
                 </span>
               </div>
@@ -502,18 +502,18 @@ export default function ResourcesPage({ onNavigate: _onNavigate }: ResourcesPage
                 return (
                   <div
                     key={cat.title}
-                    className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm"
+                    className="bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden"
                   >
                     <button
                       onClick={() => toggleCategory(originalIdx)}
-                      className="w-full flex items-center justify-between px-6 py-4 hover:bg-gray-50 transition-colors"
+                      className="w-full flex items-center justify-between px-6 py-4 hover:bg-white/[0.03] transition-colors"
                     >
                       <div className="flex items-center gap-3">
-                        <Icon size={20} className="text-[#1a56db]" />
-                        <span className="font-bold text-[#0f2044] text-base">
+                        <Icon size={20} className="text-blue-400" />
+                        <span className="font-bold text-white text-base">
                           {cat.title}
                         </span>
-                        <span className="bg-gray-100 text-gray-500 text-xs font-semibold px-2.5 py-0.5 rounded-full">
+                        <span className="bg-white/10 text-gray-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">
                           {cat.resources.length}
                         </span>
                       </div>
@@ -525,13 +525,13 @@ export default function ResourcesPage({ onNavigate: _onNavigate }: ResourcesPage
                     </button>
 
                     {isExpanded && (
-                      <div className="border-t border-gray-100">
+                      <div className="border-t border-white/5">
                         {cat.resources.map((r, rIdx) => (
                           <div
                             key={r.name}
                             className={`flex items-start sm:items-center justify-between px-6 py-3 gap-3 ${
-                              rIdx > 0 ? "border-t border-gray-50" : ""
-                            } hover:bg-gray-50/50 transition-colors`}
+                              rIdx > 0 ? "border-t border-white/[0.03]" : ""
+                            } hover:bg-white/[0.02] transition-colors`}
                           >
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center gap-2 flex-wrap">
@@ -539,7 +539,7 @@ export default function ResourcesPage({ onNavigate: _onNavigate }: ResourcesPage
                                   href={r.url}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-[#1a56db] font-semibold text-sm hover:underline inline-flex items-center gap-1"
+                                  className="text-blue-400 font-semibold text-sm hover:underline inline-flex items-center gap-1"
                                 >
                                   {r.name}
                                   <ExternalLink size={12} className="opacity-50" />
@@ -586,10 +586,10 @@ export default function ResourcesPage({ onNavigate: _onNavigate }: ResourcesPage
                 return (
                   <div
                     key={idx}
-                    className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm"
+                    className="bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden"
                   >
                     <div className="px-6 py-5">
-                      <div className="flex items-center gap-3 mb-3 text-xs text-gray-400">
+                      <div className="flex items-center gap-3 mb-3 text-xs text-gray-500">
                         <span className="inline-flex items-center gap-1">
                           <Clock size={12} />
                           {article.readTime}
@@ -599,28 +599,28 @@ export default function ResourcesPage({ onNavigate: _onNavigate }: ResourcesPage
                           {article.date}
                         </span>
                       </div>
-                      <h3 className="text-xl font-bold text-[#0f2044] mb-3">
+                      <h3 className="text-xl font-bold text-white mb-3">
                         {article.title}
                       </h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-gray-400 text-sm leading-relaxed">
                         {article.preview}
                       </p>
                       <button
                         onClick={() => toggleArticle(idx)}
-                        className="mt-4 text-[#1a56db] font-semibold text-sm hover:underline"
+                        className="mt-4 text-blue-400 font-semibold text-sm hover:underline"
                       >
                         {isExpanded ? "Show Less" : "Read More"}
                       </button>
                     </div>
                     {isExpanded && (
-                      <div className="border-t border-gray-100 px-6 py-6">
-                        <div className="prose prose-sm max-w-none text-gray-700 leading-relaxed">
+                      <div className="border-t border-white/5 px-6 py-6">
+                        <div className="prose prose-sm max-w-none text-gray-300 leading-relaxed">
                           {article.content.split("\n\n").map((para, pIdx) => {
                             if (para.startsWith("**") && para.endsWith("**")) {
                               return (
                                 <h4
                                   key={pIdx}
-                                  className="text-lg font-bold text-[#0f2044] mt-6 mb-3"
+                                  className="text-lg font-bold text-white mt-6 mb-3"
                                 >
                                   {para.replace(/\*\*/g, "")}
                                 </h4>
@@ -634,7 +634,7 @@ export default function ResourcesPage({ onNavigate: _onNavigate }: ResourcesPage
                                     segment.endsWith("**")
                                   ) {
                                     return (
-                                      <strong key={sIdx} className="text-[#0f2044]">
+                                      <strong key={sIdx} className="text-white">
                                         {segment.replace(/\*\*/g, "")}
                                       </strong>
                                     );
@@ -654,30 +654,30 @@ export default function ResourcesPage({ onNavigate: _onNavigate }: ResourcesPage
 
             {/* Coming Soon */}
             <div className="mt-10">
-              <h3 className="text-lg font-bold text-[#0f2044] mb-4">
+              <h3 className="text-lg font-bold text-white mb-4">
                 Coming Soon
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {COMING_SOON.map((item) => (
                   <div
                     key={item.title}
-                    className="bg-gray-50 border border-gray-200 rounded-2xl p-5 opacity-70"
+                    className="bg-white/[0.02] border border-white/[0.06] rounded-2xl p-5 opacity-70"
                   >
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <Lock size={14} className="text-gray-400" />
-                        <span className="text-xs font-semibold text-gray-400 bg-gray-200 px-2 py-0.5 rounded-full">
+                        <Lock size={14} className="text-gray-500" />
+                        <span className="text-xs font-semibold text-gray-500 bg-white/10 px-2 py-0.5 rounded-full">
                           Coming Soon
                         </span>
                       </div>
-                      <span className="text-xs font-medium text-gray-400">
+                      <span className="text-xs font-medium text-gray-500">
                         {item.quarter}
                       </span>
                     </div>
-                    <h4 className="font-bold text-[#0f2044] text-sm mb-1">
+                    <h4 className="font-bold text-gray-300 text-sm mb-1">
                       {item.title}
                     </h4>
-                    <p className="text-gray-400 text-xs">{item.desc}</p>
+                    <p className="text-gray-500 text-xs">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -687,16 +687,16 @@ export default function ResourcesPage({ onNavigate: _onNavigate }: ResourcesPage
       )}
 
       {/* Bottom CTA */}
-      <section className="py-12 px-4 bg-gray-50 border-t border-gray-200">
+      <section className="py-12 px-4 bg-[#0d1322] border-t border-white/5">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-gray-600 text-sm mb-2">
+          <p className="text-gray-500 text-sm mb-2">
             Know a resource we should include?
           </p>
           <a
-            href="mailto:support@grclaunchpad.net?subject=Resource Suggestion for GRC Launchpad"
-            className="text-[#1a56db] font-semibold text-sm hover:underline"
+            href="mailto:info@secureedgeadvisory.com?subject=Resource Suggestion for SecureEdge"
+            className="text-blue-400 font-semibold text-sm hover:underline"
           >
-            Email support@grclaunchpad.net
+            Email info@secureedgeadvisory.com
           </a>
         </div>
       </section>

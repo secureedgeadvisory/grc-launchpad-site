@@ -37,7 +37,7 @@ const MATURITY_LABELS = ["", "Initial", "Developing", "Defined", "Managed", "Opt
 
 const RECOMMENDATIONS: Record<string, string[]> = {
   governance: [
-    "Develop and formally approve an Information Security Policy",
+    "Develop and formally approve an Information Security Strategy",
     "Define and communicate security roles and responsibilities",
     "Establish a risk management process aligned to ISO 27001 Clause 6",
     "Schedule annual policy reviews with management sign-off",
@@ -50,26 +50,47 @@ const RECOMMENDATIONS: Record<string, string[]> = {
     "Deploy a Privileged Access Management (PAM) solution",
     "Audit and remove all shared/generic accounts"
   ],
+  people: [
+    "Launch mandatory annual security awareness training",
+    "Conduct background checks for all new employees",
+    "Establish a clear security incident reporting channel",
+    "Include security duties in job descriptions",
+    "Provide role-based training for high-risk departments"
+  ],
   data: [
-    "Conduct a data inventory and classification exercise",
+    "Build and maintain a complete information asset inventory",
     "Implement encryption for sensitive data at rest and in transit",
+    "Establish data retention schedules and disposal procedures",
+    "Classify information by sensitivity with handling procedures",
+    "Control removable media and storage devices"
+  ],
+  privacy: [
     "Document lawful basis for all personal data processing",
+    "Conduct regular information security risk assessments",
+    "Classify information by sensitivity level",
     "Appoint a Data Protection Officer or privacy lead",
-    "Establish data retention schedules and disposal procedures"
+    "Establish data subject rights procedures"
   ],
   network: [
     "Implement network segmentation to isolate critical systems",
-    "Establish patch management SLAs (critical: 24–72 hours)",
+    "Establish patch management SLAs (critical: 24-72 hours)",
     "Deploy and tune IDS/IPS and endpoint protection",
     "Schedule quarterly vulnerability scans and annual pen tests",
-    "Secure all remote access via VPN or ZTNA"
+    "Harden systems following CIS benchmarks"
   ],
   incident: [
     "Develop and test an Incident Response Plan",
     "Deploy SIEM or log management for security event monitoring",
     "Document breach notification procedures (GDPR/UAE PDPL timelines)",
-    "Create and test Business Continuity and Disaster Recovery plans",
-    "Define RTO/RPO for all critical business systems"
+    "Conduct annual tabletop exercises",
+    "Define escalation paths and communication procedures"
+  ],
+  bcp: [
+    "Develop Business Continuity Plan for critical processes",
+    "Implement and test backup recovery procedures",
+    "Define RTO/RPO for all critical business systems",
+    "Establish disaster recovery plan with failover procedures",
+    "Test BCP/DRP at least annually through exercises"
   ],
   vendor: [
     "Establish a formal TPRM program with risk-tiered vendor categories",
@@ -78,34 +99,32 @@ const RECOMMENDATIONS: Record<string, string[]> = {
     "Implement Data Processing Agreements with all data processors",
     "Set up ongoing vendor security monitoring"
   ],
-  cloud: [
-    "Document a cloud security policy and approved services list",
-    "Deploy Cloud Security Posture Management (CSPM) tooling",
-    "Audit all cloud storage for public exposure",
-    "Enforce IAM least privilege across all cloud accounts",
-    "Enable and review cloud audit logs"
-  ],
-  awareness: [
-    "Launch mandatory annual security awareness training",
-    "Conduct quarterly phishing simulation campaigns",
-    "Provide role-based training for high-risk departments",
-    "Establish a clear security incident reporting channel",
-    "Include security training in new employee onboarding"
-  ],
-  asset: [
-    "Build and maintain a complete hardware and software asset inventory",
-    "Implement a formal change management process",
-    "Deploy application whitelisting or software control",
-    "Identify and remediate end-of-life systems",
-    "Establish a mobile device management (MDM) policy"
+  physical: [
+    "Restrict and monitor physical access to server rooms",
+    "Implement environmental controls for IT facilities",
+    "Encrypt all laptops and mobile devices",
+    "Enforce clear desk and screen lock policies"
   ],
   compliance: [
     "Schedule annual internal security audits",
-    "Implement a corrective action tracking system",
-    "Maintain a compliance obligations register",
-    "Define and report security KPIs to management monthly",
-    "Monitor regulatory changes relevant to your industry"
-  ]
+    "Implement continuous improvement based on metrics",
+    "Monitor regulatory changes relevant to your industry",
+    "Define and report security KPIs to management monthly"
+  ],
+  secdev: [
+    "Integrate security into the SDLC from design phase",
+    "Conduct security testing (SAST/DAST) before deployment",
+    "Separate development, testing, and production environments",
+    "Conduct code reviews with security focus",
+    "Assess third-party components for vulnerabilities"
+  ],
+  endpoint: [
+    "Harden systems following security configuration standards",
+    "Centralize security event logging and monitoring",
+    "Implement formal change management process",
+    "Deploy endpoint detection and response (EDR)",
+    "Review security logs for anomalies daily"
+  ],
 };
 
 export function calculateResults(
